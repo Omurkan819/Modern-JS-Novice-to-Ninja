@@ -10,11 +10,15 @@ const getTodos = callback => {
     }
   })
 
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todosd/')
+  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/')
   request.send()
 }
 
 getTodos((err, data) => {
   console.log('callback fired')
-  console.log(err, data)
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(data)
+  }
 })
