@@ -19,16 +19,24 @@ const getTodos = (resource, callback) => {
 const getSomething = () => {
   return new Promise((resolve, reject) => {
     // fetch something
-    // resolve('some data')
-    reject('some error')
+    resolve('some data')
+    // reject('some error')
   })
 }
 
-getSomething().then(
-  data => {
+// getSomething().then(
+//   data => {
+//     console.log(data)
+//   },
+//   err => {
+//     console.log(err)
+//   }
+// )
+
+getSomething()
+  .then(data => {
     console.log(data)
-  },
-  err => {
+  })
+  .catch(err => {
     console.log(err)
-  }
-)
+  })
